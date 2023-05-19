@@ -4,7 +4,16 @@
   "description": "nodejs 构建可执行程序示例",
   "main": "hello.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "g:blob": "node --experimental-sea-config sea-config.json",
+    "g:node": "for /F \"tokens=*\" %n IN ('where.exe node') DO @(copy \"%n\" hello.exe)",
+    "g:node:linux-mac": "cp $(command -v node) hello",
+    "inject": "npx postject hello.exe NODE_SEA_BLOB sea-prep.blob --sentinel-fuse NODE_SEA_FUSE_fce680ab2cc467b6e072b8b5df1996b2",
+    "inject:linux": "npx postject hello NODE_SEA_BLOB sea-prep.blob --sentinel-fuse NODE_SEA_FUSE_fce680ab2cc467b6e072b8b5df1996b2",
+    "inject:mac": "npx postject hello NODE_SEA_BLOB sea-prep.blob --sentinel-fuse NODE_SEA_FUSE_fce680ab2cc467b6e072b8b5df1996b2 --macho-segment-name NODE_SEA",
+    "sign:rm": "signtool remove /s hello.exe ",
+    "sign": "signtool sign /fd SHA256 hello.exe",
+    "sign:mac": "codesign --sign - hello"
   },
   "repository": {
     "type": "git",
