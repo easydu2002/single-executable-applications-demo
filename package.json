@@ -1,0 +1,26 @@
+{
+  "name": "single-executable-applications-demo",
+  "version": "1.0.0",
+  "description": "nodejs 构建可执行程序示例",
+  "main": "hello.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/easydu2002/single-executable-applications-demo.git"
+  },
+  "keywords": [
+    "nodejs",
+    "binary"
+  ],
+  "author": "easydu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/easydu2002/single-executable-applications-demo/issues"
+  },
+  "homepage": "https://github.com/easydu2002/single-executable-applications-demo#readme",
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
